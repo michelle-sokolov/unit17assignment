@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>WorkOutTracker</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style media="screen">
+        body {
+            text-align: center;
+            background-image: url("https://imgur.com/UzIMZNW.png");
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        h1 {
+            font-size: 40px;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        h2,
+        h4 {
+            color:black;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .delete {
+            margin-left: 20px;
+            color: red;
+            cursor: pointer;
+            text-align: right;
+        }
+        
+        input {
+            width: 400px;
+            height: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 42px;
+            background-color: antiquewhite;
+        }
+        
+        textarea {
+            width: 400px;
+            height: 200px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 24px;
+            background-color: antiquewhite;
+        }
+        
+        .data-title {
+            cursor: pointer;
+            font-size: 24px;
+        }
+        
+        #results {
+            width: 400px;
+            height: 200px;
+            overflow: auto;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: antiquewhite;
+        }
+        
+        #action-button {
+            display: inline-block;
+        }
+        
+        #buttons {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>ULTIMATE WORKOUT TRACKER</h1>
+    <h4>Log your workout by submitting your details below!</h4>
+    <h4>Click on a workout note to edit its title, description, or date.</h4>
+    <div id="user-input">
+        <p>Title (eg. "Hiking", "Swimming", "Weightlifting")</p>
+        <input type="text" id="title" />
+        <br>
+        <p>Description (eg. "I hiked 3 miles uphill", "I deadlifted 150lb")</p>
+        <textarea id="note"></textarea>
+        <p>Date</p>
+        <input type="text" id="date" />
+        <div id="buttons">
+            <div id="action-button">
+                <button id="make-new">Submit</button>
+            </div>
+            <button id="clear-all">Delete All Workouts</button>
+        </div>
+    </div>
+
+    <div id="results"></div>
+    <script src="app.js"></script>
+</body>
+
+</html>
